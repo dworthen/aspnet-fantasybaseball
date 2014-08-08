@@ -169,9 +169,19 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Entities\FavoriteTeam.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408082012533_Initial.cs" />
+    <Compile Include="Migrations\201408082012533_Initial.Designer.cs">
+      <DependentUpon>201408082012533_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408082028216_Added_FavoriteTeams.cs" />
+    <Compile Include="Migrations\201408082028216_Added_FavoriteTeams.Designer.cs">
+      <DependentUpon>201408082028216_Added_FavoriteTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -243,6 +253,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201408082012533_Initial.resx">
+      <DependentUpon>201408082012533_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408082028216_Added_FavoriteTeams.resx">
+      <DependentUpon>201408082028216_Added_FavoriteTeams.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

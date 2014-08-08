@@ -2,6 +2,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
+using FantasyBaseball.Entities;
+using System.Data.Entity;
 
 namespace FantasyBaseball.Models
 {
@@ -15,10 +18,15 @@ namespace FantasyBaseball.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public virtual ICollection<FavoriteTeam> FavoriteTeams { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<FavoriteTeam> FavoriteTeams { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
